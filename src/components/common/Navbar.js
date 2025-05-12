@@ -116,7 +116,7 @@ const Navbar = () => {
               {(loading || loading2) && <div className='text-white font-bold'>Loading ...</div>}
 
               {token === null && (
-                <Link to={'/login'} onClick={() => setIsMenuModalOpen(false)}>
+                <Link to={'/'} onClick={() => setIsMenuModalOpen(false)}>
                   <div className='flex gap-x-2 items-center w-full py-2 px-3 text-richblack-100 hover:text-richblack-25 hover:bg-richblack-700'>
                     <VscSignIn className='text-lg' />
                     Log In
@@ -125,7 +125,7 @@ const Navbar = () => {
               )}
 
               {token === null && (
-                <Link to={'/signup'} onClick={() => setIsMenuModalOpen(false)}>
+                <Link to={'/'} onClick={() => setIsMenuModalOpen(false)}>
                   <div className='flex gap-x-2 items-center w-full py-2 px-3 text-richblack-100 hover:text-richblack-25 hover:bg-richblack-700'>
                     <AiOutlineLogin className='text-lg' />
                     Sign Up
@@ -187,27 +187,7 @@ const Navbar = () => {
 
               {/* Category */}
               <div className='' onClick={() => setCategoryOpen((prev) => !prev)}>
-                <details>
-                  <summary className='flex gap-x-2 items-center w-full py-2 px-3 text-richblack-100'>
-                    <BiCategory className='text-lg' />
-                    Category
-                    {categoryOpen ? <SlArrowUp className='translate-y-[1px] ml-auto mr-1' /> : <SlArrowDown className='translate-y-[1px] ml-auto mr-1' />}
-                  </summary>
-
-                  <div className='px-4 text-richblack-100'>
-                    {catalogs.length ? (
-                      <div className='flex flex-col capitalize'>
-                        {catalogs.map((catalog, index) => (
-                          <Link to={`/categorycourses/${catalog.name.split(' ').join('-')}`} key={index} onClick={() => setIsMenuModalOpen(false)}>
-                            <p className='rounded-lg py-2 pl-4'>{catalog.name}</p>
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className='rounded-lg py-2 pl-4 select-none cursor-not-allowed'>No Catalog Available</div>
-                    )}
-                  </div>
-                </details>
+                
               </div>
             </div>
           </HamburgerMenu>
