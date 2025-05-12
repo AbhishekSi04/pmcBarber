@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HighlightedText from '../components/core/HomePage/HighlightedText'
 import Footer from '../components/common/Footer'
-import FoundingStory from '../assets/Images/FoundingStory.png'
-import BannerImage1 from "../assets/Images/aboutus1.webp"
+import BannerImage1 from "../assets/Images/about.webp"
 import { getAllReviews } from '../services/operations/otherServices';
 
 
@@ -37,12 +36,7 @@ const About = () => {
           Established in 2018, PMC Barbershop has been providing premium grooming services to the men of Denton, TX. Our mission is to deliver exceptional haircuts and grooming services in a welcoming, classic barbershop environment
           </p>
 
-          <div className='sm:h-[70px] mt-10 lg:h-[150px]' ></div>
 
-          <div className=' absolute bottom-0 translate-y-[30%]   w-full flex gap-3 lg:gap-5 justify-center items-center' >
-            <img src={BannerImage1} alt="" />
-            
-          </div>
         </div>
       </div>
 
@@ -66,7 +60,7 @@ const About = () => {
             </div>
 
             <div >
-              <img src={FoundingStory} alt="" className='shadow-[0_0_20px_0] shadow-[#FC6767]' />
+              <img src={BannerImage1} alt="" height={500} width={500} className='shadow-[0_0_20px_0] shadow-[#FC6767]' />
             </div>
           </div>
 

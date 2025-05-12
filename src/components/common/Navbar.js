@@ -82,28 +82,9 @@ const Navbar = () => {
             <ul className='flex gap-x-10 text-richblack-25'>
               {navbarLinks.map((link, ind) => (
                 <li key={ind}>
-                  {link.title === '' ? (
-                    <div className='flex items-center gap-1 group cursor-pointer relative'>
-                      <p>{link.title}</p>
-                      <SlArrowDown className='translate-y-[1px]' />
-
-                      <div className='z-10 absolute top-[50%] translate-y-[3em] left-[50%] translate-x-[-50%] flex flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 transition-all duration-150 w-[200px] lg:w-[300px] invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:translate-y-[1.65em]'>
-                        <div className='absolute h-6 w-6 top-0 translate-y-[-40%] select-none left-[50%] translate-x-[80%] rotate-45 rounded bg-richblack-5'></div>
-
-                        {catalogs.length ? (
-                          <div className='flex flex-col capitalize'>
-                            {catalogs.map((catalog, index) => (
-                              <Link to={`/categorycourses/${catalog.name.split(' ').join('-')}`} key={index}>
-                                <p className='hover:bg-richblack-50 rounded-lg py-3 pl-4'>{catalog.name}</p>
-                              </Link>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className='select-none cursor-not-allowed'>No Catalog Available</div>
-                        )}
-                      </div>
-                    </div>
-                  ) : (
+                  {link.title === 'Services' ? <li>
+      <a href="#pricing">Services</a> {/* Will scroll to the Pricing section */}
+    </li> : (
                     <Link to={link?.path}>
                       <p className={`${matchRoute(link?.path) ? 'text-yellow-25' : 'text-richblack-25'}`}>
                         {link.title}

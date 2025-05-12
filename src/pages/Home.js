@@ -77,44 +77,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Section 2 - White color section */}
-      {/* <div className='bg-pure-greys-5 text-richblue-700' >
-        <div className='homepage_bg h-[150px] md:h-[320px]'>
-          <div className='w-11/12 pt-[50px] md:pt-[200px] max-w-maxContent mx-auto flex justify-center' >
-            <div className='flex flex-row gap-7' >
-              <CTAButton active={true} linkto={'/signup'} >
-                <div className='flex flex-row items-center gap-2' >
-                  Explore Full Catalog
-                  <FaArrowRight />
-                </div>
-              </CTAButton>
-
-              <CTAButton active={false} linkto={'/login'} >
-                <div className='text-white' >Learn More</div>
-              </CTAButton>
-            </div>
-          </div>
-        </div>
-
-        <div className='flex flex-col max-w-maxContent w-11/12 mt-5 md:mt-10 lg:mt-16 mx-auto gap-8 items-center justify-between' >
-          <div className='flex flex-row mb-10 justify-between gap-10' >
-            <div className='text-4xl font-semibold w-[45%]' >
-              Get the skills you need for a
-              <HighlightedText text="job that is in demand." />
-            </div>
-
-            <div className='flex flex-col gap-10 w-[40%] items-start'>
-              <p>The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.</p>
-              <CTAButton active={true} linkto={'/signup'} >
-                Learn More
-              </CTAButton>
-            </div>
-          </div>
-
-          <TimelineSection />
-          <LearningLanguageSection />
-        </div>
-      </div> */}
+      
 
 
       {/* Section 3 - Black color section */}
@@ -165,8 +128,9 @@ const Home = () => {
 
 
           </div>
-
-          <PricingSection />
+          <div id='pricing'>
+              <PricingSection />
+          </div>
 
         </div>
 
