@@ -38,7 +38,7 @@ const Home = () => {
 
 
           <div className='rounded-full bg-richblack-800 text-richblack-200 mt-16 p-1 mx-auto w-fit drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] group transition-all duration-200 hover:scale-95 hover:drop-shadow-none '>
-            <Link to={'/signup'}>
+            <Link to={'/'}>
               <div className=' flex flex-row items-center gap-2 font-bold rounded-full px-10 py-[5px] transition-all duration-200 group-hover:bg-richblack-900 '>
               Premium Barber Services in Denton
                 <FaArrowRight />
@@ -57,11 +57,11 @@ const Home = () => {
           </div>
 
           <div className='mt-8 flex flex-row gap-7' >
-            <CTAButton active={true} linkto={'/signup'} >
+            <CTAButton active={true} linkto={'/'} >
               Learn More
             </CTAButton>
 
-            <CTAButton active={false} linkto={'/login'} >
+            <CTAButton active={false} linkto={'/'} >
               Book a Demo
             </CTAButton>
           </div>
